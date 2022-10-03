@@ -12,6 +12,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run tests
       uses: joonvena/robotframework-docker-action@v1.0
+      env:
+        BROWSER: chrome
       with:
         robot_tests_dir: TestCases
     - name: Store test report
