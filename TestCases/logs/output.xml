@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221004 13:41:10.906" rpa="false" schemaversion="3">
+<suite id="s1" name="01-LoginTests" source="C:\Users\SQUADRA\Desktop\TestCases\01-LoginTests.robot">
+<test id="s1-t1" name="1 - Criar conta e fazer login" line="7">
+<kw name="Dado que entro no site usando o navegador chrome" library="GlobalSteps" type="SETUP" sourcename="Dado que entro no site usando o navegador ${BROWSER}">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://seubarriga.wcaquino.me/login</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221004 13:41:11.136" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<status status="PASS" starttime="20221004 13:41:11.135" endtime="20221004 13:41:13.245"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221004 13:41:13.245" endtime="20221004 13:41:13.377"/>
+</kw>
+<status status="PASS" starttime="20221004 13:41:11.135" endtime="20221004 13:41:13.377"/>
+</kw>
+<kw name="Dado que clico para fazer o cadastro" library="LoginSteps">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login.BtnSignUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:13.380" level="INFO">Clicking element '//a[text()='Novo usuário?']'.</msg>
+<status status="PASS" starttime="20221004 13:41:13.379" endtime="20221004 13:41:13.658"/>
+</kw>
+<status status="PASS" starttime="20221004 13:41:13.378" endtime="20221004 13:41:13.658"/>
+</kw>
+<kw name="Quando preencho o formulario de cadastro" library="LoginSteps">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Login.NameInput}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:13.662" level="INFO">Typing text 'pedro' into text field '//input[@id='nome']'.</msg>
+<status status="PASS" starttime="20221004 13:41:13.660" endtime="20221004 13:41:13.744"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Login.EmailInput}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:13.745" level="INFO">Typing text 'pedro@bola410.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20221004 13:41:13.744" endtime="20221004 13:41:13.829"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${Login.PasswordInput}</arg>
+<arg>pedro123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:13.830" level="INFO">Typing password into text field '//input[@id='senha']'.</msg>
+<msg timestamp="20221004 13:41:13.864" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221004 13:41:13.904" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221004 13:41:13.829" endtime="20221004 13:41:13.904"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login.SignUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:13.905" level="INFO">Clicking element '//input[@value='Cadastrar']'.</msg>
+<status status="PASS" starttime="20221004 13:41:13.904" endtime="20221004 13:41:14.452"/>
+</kw>
+<status status="PASS" starttime="20221004 13:41:13.660" endtime="20221004 13:41:14.452"/>
+</kw>
+<kw name="E preencho o login" library="LoginSteps">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Login.EmailInput}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:14.454" level="INFO">Typing text 'pedro@bola410.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20221004 13:41:14.453" endtime="20221004 13:41:14.547"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${Login.PasswordInput}</arg>
+<arg>pedro123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:14.549" level="INFO">Typing password into text field '//input[@id='senha']'.</msg>
+<msg timestamp="20221004 13:41:14.585" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221004 13:41:14.623" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221004 13:41:14.547" endtime="20221004 13:41:14.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login.BtnSignIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221004 13:41:14.624" level="INFO">Clicking element '//button[text()='Entrar']'.</msg>
+<status status="PASS" starttime="20221004 13:41:14.624" endtime="20221004 13:41:15.197"/>
+</kw>
+<status status="PASS" starttime="20221004 13:41:14.453" endtime="20221004 13:41:15.198"/>
+</kw>
+<kw name="Entao faço login com sucesso" library="LoginSteps">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//div[text()='Bem vindo, ${name}!']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221004 13:41:15.216" level="INFO">Current page contains element '//div[text()='Bem vindo, pedro!']'.</msg>
+<status status="PASS" starttime="20221004 13:41:15.200" endtime="20221004 13:41:15.216"/>
+</kw>
+<status status="PASS" starttime="20221004 13:41:15.199" endtime="20221004 13:41:15.216"/>
+</kw>
+<kw name="Fechar o navegador" library="GlobalSteps" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221004 13:41:15.217" endtime="20221004 13:41:17.378"/>
+</kw>
+<status status="PASS" starttime="20221004 13:41:15.217" endtime="20221004 13:41:17.379"/>
+</kw>
+<status status="PASS" starttime="20221004 13:41:11.133" endtime="20221004 13:41:17.381"/>
+</test>
+<status status="PASS" starttime="20221004 13:41:10.908" endtime="20221004 13:41:17.388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="01-LoginTests">01-LoginTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221004 13:41:11.126" level="ERROR">Error in file 'C:\Users\SQUADRA\Desktop\TestCases\BillSteps.robot' on line 4: Resource file 'Elements\Main_Elements.resource' does not exist.</msg>
+<msg timestamp="20221004 13:41:11.129" level="ERROR">Error in file 'C:\Users\SQUADRA\Desktop\TestCases\BillSteps.robot' on line 5: Variable file 'Utils\utils.py' does not exist.</msg>
+</errors>
+</robot>
