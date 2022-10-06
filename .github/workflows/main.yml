@@ -20,10 +20,8 @@ jobs:
               export DISPLAY=:99
               chromedriver --url-base=/wd/hub &
               sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
-
-
-      name:  Checkout Projeto
-      uses:  action/chekout@v3
+      name: Checkout
+      uses: action/chekout@v3
 
       name: Setup Python Enviroment
       uses: actions/setup-python@v4
